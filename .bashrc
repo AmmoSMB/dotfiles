@@ -14,6 +14,8 @@ export EDITOR=vim
 export VISUAL=vim
 
 export PATH=$PATH:$HOME/.npm-global/bin
+export GOPATH=~/go
+PATH=$PATH:$GOPATH/bin
 
 alias newb='sudo pacman -Syyu'
 alias ls='ls --color=auto'
@@ -22,3 +24,9 @@ alias ll='ls -la --color=auto'
 alias grep='grep --color=auto'
 
 eval $(dircolors -b)
+
+###-tns-completion-start-###
+if [ -f /home/stephen/.tnsrc ]; then 
+    source /home/stephen/.tnsrc 
+fi
+###-tns-completion-end-###
